@@ -1,0 +1,128 @@
+aid: mosaic-app
+name: Mosaic
+description: >-
+  Mosaic is a resource management, workforce planning, and AI-assisted
+  project management platform built for architecture, engineering, and
+  professional services firms. It plugs into the ERPs those firms already
+  run — Deltek (Ajera, Vantagepoint, Vision, Costpoint), Unanet, BST10,
+  BQE Core, QuickBooks, Salesforce, and Microsoft Dynamics 365 — plus
+  project management systems (Asana, Jira, GitHub, Karbon) and HRIS
+  (BambooHR), then unifies the data into a single forecasting, time-entry,
+  and capacity-planning surface. Mosaic exposes an Open API for custom
+  integrations alongside its packaged connectors.
+type: Index
+position: Provider
+access: 3rd-Party
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Resource Management
+  - Workforce Planning
+  - Project Management
+  - AEC
+  - Professional Services
+  - Time Tracking
+  - Forecasting
+  - AI Assistant
+  - Integration Platform
+url: https://raw.githubusercontent.com/api-evangelist/mosaic-app/refs/heads/main/apis.yml
+created: '2026-05-23'
+modified: '2026-05-23'
+specificationVersion: '0.20'
+apis:
+  - aid: mosaic-app:open-api
+    name: Mosaic Open API
+    description: >-
+      The Mosaic Open API exposes the workforce, project, and financial
+      data Mosaic manages so firms can build custom integrations beyond
+      the packaged ERP and PM connectors. It authenticates via API token
+      and covers people, projects, phases, tasks, time entries, and work
+      plans.
+    humanURL: https://readme.mosaicapp.com/reference/authentication
+    tags:
+      - Open API
+      - Time Entries
+      - Work Plans
+      - Projects
+      - People
+      - Custom Integrations
+    properties:
+      - type: Documentation
+        url: https://readme.mosaicapp.com/
+      - type: APIReference
+        url: https://readme.mosaicapp.com/reference/authentication
+      - type: ChangeLog
+        url: https://readme.mosaicapp.com/changelog
+      - type: LLMSTxt
+        url: https://readme.mosaicapp.com/llms.txt
+      - type: GettingStarted
+        url: https://readme.mosaicapp.com/docs/integration-steps
+    features:
+      - name: People and Capacity
+        description: Read and write people, roles, capacities, and team structure.
+      - name: Projects, Phases, and Tasks
+        description: Create and update projects, subphases, work categories, scope, and tasks.
+      - name: Work Plans
+        description: Push allocations and work plans into Mosaic for resource scheduling.
+      - name: Time Entries
+        description: Submit timesheets and time entries (with or without subphases).
+      - name: Currency Exchange Rates
+        description: Manage exchange-rate uploads for multi-currency firms.
+      - name: Token-Based Authentication
+        description: Per-tenant API tokens issued from the Mosaic admin console.
+    useCases:
+      - name: Custom ERP Integration
+        description: Build a connector to an ERP that Mosaic doesn't yet support natively.
+      - name: HRIS Sync
+        description: Sync people, hires, terminations, and capacity from a custom HRIS.
+      - name: Forecast Export
+        description: Pull Mosaic forecasts into a data warehouse or BI tool.
+      - name: Time Entry Automation
+        description: Bulk-upload time entries from a custom timekeeping flow.
+    integrations:
+      - name: Deltek Ajera (Cloud + On-Premise)
+      - name: Deltek Vantagepoint
+      - name: Deltek Vision
+      - name: Deltek Costpoint Cloud
+      - name: Unanet
+      - name: BST10
+      - name: BQE Core
+      - name: QuickBooks (Online + Desktop)
+      - name: Salesforce
+      - name: Microsoft Dynamics 365
+      - name: Asana
+      - name: Jira
+      - name: GitHub
+      - name: Karbon
+      - name: BambooHR
+      - name: Slack
+      - name: SQL Server (Direct Database + Replication)
+      - name: CSV Import
+    authentication:
+      - type: API Key
+        description: Per-tenant API token issued from the Mosaic admin console.
+      - type: SSO
+        description: SAML / OIDC SSO + MFA for the application UI.
+common:
+  - type: Website
+    url: https://mosaicapp.com/
+  - type: Documentation
+    url: https://readme.mosaicapp.com/
+  - type: APIReference
+    url: https://readme.mosaicapp.com/reference/authentication
+  - type: GettingStarted
+    url: https://readme.mosaicapp.com/docs/integration-steps
+  - type: ChangeLog
+    url: https://readme.mosaicapp.com/changelog
+  - type: LLMSTxt
+    url: https://readme.mosaicapp.com/llms.txt
+  - type: Pricing
+    url: https://mosaicapp.com/pricing
+  - type: Plan
+    url: plans/mosaic-app-plans-pricing.yml
+  - type: Rate Limit
+    url: rate-limits/mosaic-app-rate-limits.yml
+  - type: FinOps
+    url: finops/mosaic-app-finops.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
