@@ -1,0 +1,925 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Mosaic Open API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Members",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Fetches all members.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api-server.prod.prod.us-east-1.mosaicapp.com/api/:team_id/team_memberships",
+            "headers": [
+              {
+                "name": "x-origin",
+                "value": ""
+              },
+              {
+                "name": "x-tenant",
+                "value": ""
+              },
+              {
+                "name": "x-realm-id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "team_id",
+                "value": "",
+                "type": "path",
+                "description": "Mosaic Team ID issued by your CSM."
+              }
+            ]
+          },
+          "docs": "Fetches all members."
+        },
+        {
+          "info": {
+            "name": "Creates a member.",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-server.prod.prod.us-east-1.mosaicapp.com/api/:team_id/team_memberships",
+            "headers": [
+              {
+                "name": "x-origin",
+                "value": ""
+              },
+              {
+                "name": "x-tenant",
+                "value": ""
+              },
+              {
+                "name": "x-realm-id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "team_id",
+                "value": "",
+                "type": "path",
+                "description": "Mosaic Team ID issued by your CSM."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a member."
+        },
+        {
+          "info": {
+            "name": "Fetches a member.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api-server.prod.prod.us-east-1.mosaicapp.com/api/:team_id/team_memberships/:id",
+            "headers": [
+              {
+                "name": "x-origin",
+                "value": ""
+              },
+              {
+                "name": "x-tenant",
+                "value": ""
+              },
+              {
+                "name": "x-realm-id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "team_id",
+                "value": "",
+                "type": "path",
+                "description": "Mosaic Team ID issued by your CSM."
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Fetches a member."
+        },
+        {
+          "info": {
+            "name": "Updates a member.",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api-server.prod.prod.us-east-1.mosaicapp.com/api/:team_id/team_memberships/:id",
+            "headers": [
+              {
+                "name": "x-origin",
+                "value": ""
+              },
+              {
+                "name": "x-tenant",
+                "value": ""
+              },
+              {
+                "name": "x-realm-id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "team_id",
+                "value": "",
+                "type": "path",
+                "description": "Mosaic Team ID issued by your CSM."
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Updates a member."
+        },
+        {
+          "info": {
+            "name": "Archives a member.",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-server.prod.prod.us-east-1.mosaicapp.com/api/:team_id/team_memberships/:id/archive",
+            "headers": [
+              {
+                "name": "x-origin",
+                "value": ""
+              },
+              {
+                "name": "x-tenant",
+                "value": ""
+              },
+              {
+                "name": "x-realm-id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "team_id",
+                "value": "",
+                "type": "path",
+                "description": "Mosaic Team ID issued by your CSM."
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Archives a member."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Projects",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Fetches all projects.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api-server.prod.prod.us-east-1.mosaicapp.com/api/:team_id/projects",
+            "headers": [
+              {
+                "name": "x-origin",
+                "value": ""
+              },
+              {
+                "name": "x-tenant",
+                "value": ""
+              },
+              {
+                "name": "x-realm-id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "team_id",
+                "value": "",
+                "type": "path",
+                "description": "Mosaic Team ID issued by your CSM."
+              }
+            ]
+          },
+          "docs": "Fetches all projects."
+        },
+        {
+          "info": {
+            "name": "Creates a project.",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-server.prod.prod.us-east-1.mosaicapp.com/api/:team_id/projects",
+            "headers": [
+              {
+                "name": "x-origin",
+                "value": ""
+              },
+              {
+                "name": "x-tenant",
+                "value": ""
+              },
+              {
+                "name": "x-realm-id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "team_id",
+                "value": "",
+                "type": "path",
+                "description": "Mosaic Team ID issued by your CSM."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a project."
+        },
+        {
+          "info": {
+            "name": "Updates a project.",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api-server.prod.prod.us-east-1.mosaicapp.com/api/:team_id/projects/:id",
+            "headers": [
+              {
+                "name": "x-origin",
+                "value": ""
+              },
+              {
+                "name": "x-tenant",
+                "value": ""
+              },
+              {
+                "name": "x-realm-id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "team_id",
+                "value": "",
+                "type": "path",
+                "description": "Mosaic Team ID issued by your CSM."
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Updates a project."
+        },
+        {
+          "info": {
+            "name": "Deletes a project.",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api-server.prod.prod.us-east-1.mosaicapp.com/api/:team_id/projects/:id",
+            "headers": [
+              {
+                "name": "x-origin",
+                "value": ""
+              },
+              {
+                "name": "x-tenant",
+                "value": ""
+              },
+              {
+                "name": "x-realm-id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "team_id",
+                "value": "",
+                "type": "path",
+                "description": "Mosaic Team ID issued by your CSM."
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Deletes a project."
+        },
+        {
+          "info": {
+            "name": "Override estimated values for a project.",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-server.prod.prod.us-east-1.mosaicapp.com/api/:team_id/projects/:id/override",
+            "headers": [
+              {
+                "name": "x-origin",
+                "value": ""
+              },
+              {
+                "name": "x-tenant",
+                "value": ""
+              },
+              {
+                "name": "x-realm-id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "team_id",
+                "value": "",
+                "type": "path",
+                "description": "Mosaic Team ID issued by your CSM."
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Override estimated values for a project."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Tasks",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Fetches all tasks for a project.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api-server.prod.prod.us-east-1.mosaicapp.com/api/:team_id/tasks",
+            "headers": [
+              {
+                "name": "x-origin",
+                "value": ""
+              },
+              {
+                "name": "x-tenant",
+                "value": ""
+              },
+              {
+                "name": "x-realm-id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "team_id",
+                "value": "",
+                "type": "path",
+                "description": "Mosaic Team ID issued by your CSM."
+              }
+            ]
+          },
+          "docs": "Fetches all tasks for a project."
+        },
+        {
+          "info": {
+            "name": "Creates a task.",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-server.prod.prod.us-east-1.mosaicapp.com/api/:team_id/tasks",
+            "headers": [
+              {
+                "name": "x-origin",
+                "value": ""
+              },
+              {
+                "name": "x-tenant",
+                "value": ""
+              },
+              {
+                "name": "x-realm-id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "team_id",
+                "value": "",
+                "type": "path",
+                "description": "Mosaic Team ID issued by your CSM."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a task."
+        },
+        {
+          "info": {
+            "name": "Updates a task.",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api-server.prod.prod.us-east-1.mosaicapp.com/api/:team_id/tasks/:id",
+            "headers": [
+              {
+                "name": "x-origin",
+                "value": ""
+              },
+              {
+                "name": "x-tenant",
+                "value": ""
+              },
+              {
+                "name": "x-realm-id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "team_id",
+                "value": "",
+                "type": "path",
+                "description": "Mosaic Team ID issued by your CSM."
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Updates a task."
+        },
+        {
+          "info": {
+            "name": "Deletes a task.",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api-server.prod.prod.us-east-1.mosaicapp.com/api/:team_id/tasks/:id",
+            "headers": [
+              {
+                "name": "x-origin",
+                "value": ""
+              },
+              {
+                "name": "x-tenant",
+                "value": ""
+              },
+              {
+                "name": "x-realm-id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "team_id",
+                "value": "",
+                "type": "path",
+                "description": "Mosaic Team ID issued by your CSM."
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Deletes a task."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Time Entries",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Fetches all time entries.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api-server.prod.prod.us-east-1.mosaicapp.com/api/:team_id/time_entries",
+            "headers": [
+              {
+                "name": "x-origin",
+                "value": ""
+              },
+              {
+                "name": "x-tenant",
+                "value": ""
+              },
+              {
+                "name": "x-realm-id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "team_id",
+                "value": "",
+                "type": "path",
+                "description": "Mosaic Team ID issued by your CSM."
+              }
+            ]
+          },
+          "docs": "Fetches all time entries."
+        },
+        {
+          "info": {
+            "name": "Creates a time entry.",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-server.prod.prod.us-east-1.mosaicapp.com/api/:team_id/time_entries",
+            "headers": [
+              {
+                "name": "x-origin",
+                "value": ""
+              },
+              {
+                "name": "x-tenant",
+                "value": ""
+              },
+              {
+                "name": "x-realm-id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "team_id",
+                "value": "",
+                "type": "path",
+                "description": "Mosaic Team ID issued by your CSM."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a time entry."
+        },
+        {
+          "info": {
+            "name": "Updates a time entry.",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api-server.prod.prod.us-east-1.mosaicapp.com/api/:team_id/time_entries/:id",
+            "headers": [
+              {
+                "name": "x-origin",
+                "value": ""
+              },
+              {
+                "name": "x-tenant",
+                "value": ""
+              },
+              {
+                "name": "x-realm-id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "team_id",
+                "value": "",
+                "type": "path",
+                "description": "Mosaic Team ID issued by your CSM."
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Updates a time entry."
+        },
+        {
+          "info": {
+            "name": "Deletes a time entry.",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api-server.prod.prod.us-east-1.mosaicapp.com/api/:team_id/time_entries/:id",
+            "headers": [
+              {
+                "name": "x-origin",
+                "value": ""
+              },
+              {
+                "name": "x-tenant",
+                "value": ""
+              },
+              {
+                "name": "x-realm-id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "team_id",
+                "value": "",
+                "type": "path",
+                "description": "Mosaic Team ID issued by your CSM."
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Deletes a time entry."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Work Plans",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Fetches all work plans.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api-server.prod.prod.us-east-1.mosaicapp.com/api/:team_id/work_plans",
+            "headers": [
+              {
+                "name": "x-origin",
+                "value": ""
+              },
+              {
+                "name": "x-tenant",
+                "value": ""
+              },
+              {
+                "name": "x-realm-id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "team_id",
+                "value": "",
+                "type": "path",
+                "description": "Mosaic Team ID issued by your CSM."
+              }
+            ]
+          },
+          "docs": "Fetches all work plans."
+        },
+        {
+          "info": {
+            "name": "Creates a work plan.",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-server.prod.prod.us-east-1.mosaicapp.com/api/:team_id/work_plans",
+            "headers": [
+              {
+                "name": "x-origin",
+                "value": ""
+              },
+              {
+                "name": "x-tenant",
+                "value": ""
+              },
+              {
+                "name": "x-realm-id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "team_id",
+                "value": "",
+                "type": "path",
+                "description": "Mosaic Team ID issued by your CSM."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a work plan."
+        },
+        {
+          "info": {
+            "name": "Updates a work plan.",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api-server.prod.prod.us-east-1.mosaicapp.com/api/:team_id/work_plans/:id",
+            "headers": [
+              {
+                "name": "x-origin",
+                "value": ""
+              },
+              {
+                "name": "x-tenant",
+                "value": ""
+              },
+              {
+                "name": "x-realm-id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "team_id",
+                "value": "",
+                "type": "path",
+                "description": "Mosaic Team ID issued by your CSM."
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Updates a work plan."
+        },
+        {
+          "info": {
+            "name": "Destroys a work plan.",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api-server.prod.prod.us-east-1.mosaicapp.com/api/:team_id/work_plans/:id",
+            "headers": [
+              {
+                "name": "x-origin",
+                "value": ""
+              },
+              {
+                "name": "x-tenant",
+                "value": ""
+              },
+              {
+                "name": "x-realm-id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "team_id",
+                "value": "",
+                "type": "path",
+                "description": "Mosaic Team ID issued by your CSM."
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Destroys a work plan."
+        },
+        {
+          "info": {
+            "name": "Destroys work plans in bulk.",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-server.prod.prod.us-east-1.mosaicapp.com/api/:team_id/work_plans/bulk_delete",
+            "headers": [
+              {
+                "name": "x-origin",
+                "value": ""
+              },
+              {
+                "name": "x-tenant",
+                "value": ""
+              },
+              {
+                "name": "x-realm-id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "team_id",
+                "value": "",
+                "type": "path",
+                "description": "Mosaic Team ID issued by your CSM."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Destroys work plans in bulk."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
