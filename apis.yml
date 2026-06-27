@@ -53,7 +53,7 @@ apis:
         url: https://readme.mosaicapp.com/reference/authentication
       - type: ChangeLog
         url: https://readme.mosaicapp.com/changelog
-      - type: LLMSTxt
+      - type: LlmsText
         url: https://readme.mosaicapp.com/llms.txt
       - type: GettingStarted
         url: https://readme.mosaicapp.com/docs/integration-steps
@@ -114,13 +114,13 @@ common:
     url: https://readme.mosaicapp.com/docs/integration-steps
   - type: ChangeLog
     url: https://readme.mosaicapp.com/changelog
-  - type: LLMSTxt
+  - type: LlmsText
     url: https://readme.mosaicapp.com/llms.txt
   - type: Pricing
     url: https://mosaicapp.com/pricing
-  - type: Plan
+  - type: Plans
     url: plans/mosaic-app-plans-pricing.yml
-  - type: Rate Limit
+  - type: RateLimits
     url: rate-limits/mosaic-app-rate-limits.yml
   - type: FinOps
     url: finops/mosaic-app-finops.yml
