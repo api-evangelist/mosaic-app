@@ -104,6 +104,12 @@ apis:
       - type: SSO
         description: SAML / OIDC SSO + MFA for the application UI.
 common:
+  - type: TrustCenter
+    url: security/mosaic-app-trust-center.yml
+  - type: DomainSecurity
+    url: security/mosaic-app-domain-security.yml
+  - type: Authentication
+    url: authentication/mosaic-app-authentication.yml
   - type: Website
     url: https://mosaicapp.com/
   - type: Documentation
@@ -124,6 +130,8 @@ common:
     url: rate-limits/mosaic-app-rate-limits.yml
   - type: FinOps
     url: finops/mosaic-app-finops.yml
+  - url: https://mosaicapp.com/blog
+    type: Blog
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
