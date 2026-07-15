@@ -104,6 +104,8 @@ apis:
       - type: SSO
         description: SAML / OIDC SSO + MFA for the application UI.
 common:
+  - type: AgenticAccess
+    url: agentic-access/mosaic-app-agentic-access.yml
   - type: TrustCenter
     url: security/mosaic-app-trust-center.yml
   - type: DomainSecurity
