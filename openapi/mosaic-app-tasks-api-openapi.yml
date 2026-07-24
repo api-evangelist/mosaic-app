@@ -1,0 +1,149 @@
+openapi: 3.1.0
+info:
+  title: Mosaic Open Members Tasks API
+  version: v1
+  description: 'The Mosaic Open API exposes Mosaic''s resource-management, workforce
+
+    planning, and project data so customers can build custom integrations
+
+    beyond Mosaic''s packaged connectors. Authentication uses an API token
+
+    issued by your Mosaic Customer Success Manager along with your unique
+
+    Mosaic Team ID.
+
+
+    Endpoint structure: `/api/{team_id}/{data_type}` where `{data_type}` is
+
+    one of the documented resources (team_memberships, projects, tasks,
+
+    time_entries, work_plans, etc.). The base host is
+
+    `https://api-server.prod.prod.us-east-1.mosaicapp.com` for multi-tenant
+
+    customers; single-tenant customers get a per-tenant URL.
+
+
+    Rate limit: 300 requests per 5 minutes (~1 req/sec). All traffic uses
+
+    HTTPS.
+
+    '
+  contact:
+    name: Mosaic
+    url: https://readme.mosaicapp.com/reference/authentication
+servers:
+- url: https://api-server.prod.prod.us-east-1.mosaicapp.com
+  description: Multi-tenant production API
+security:
+- apiKey: []
+tags:
+- name: Tasks
+paths:
+  /api/{team_id}/tasks:
+    parameters:
+    - $ref: '#/components/parameters/TeamId'
+    - $ref: '#/components/parameters/XOrigin'
+    - $ref: '#/components/parameters/XTenant'
+    - $ref: '#/components/parameters/XRealmId'
+    get:
+      tags:
+      - Tasks
+      operationId: listTasks
+      summary: Fetches all tasks for a project.
+      responses:
+        '200':
+          description: Success
+    post:
+      tags:
+      - Tasks
+      operationId: createTask
+      summary: Creates a task.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: true
+      responses:
+        '201':
+          description: Created
+  /api/{team_id}/tasks/{id}:
+    parameters:
+    - $ref: '#/components/parameters/TeamId'
+    - $ref: '#/components/parameters/Id'
+    - $ref: '#/components/parameters/XOrigin'
+    - $ref: '#/components/parameters/XTenant'
+    - $ref: '#/components/parameters/XRealmId'
+    patch:
+      tags:
+      - Tasks
+      operationId: updateTask
+      summary: Updates a task.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: true
+      responses:
+        '200':
+          description: Success
+    delete:
+      tags:
+      - Tasks
+      operationId: deleteTask
+      summary: Deletes a task.
+      responses:
+        '204':
+          description: Deleted
+components:
+  parameters:
+    TeamId:
+      name: team_id
+      in: path
+      required: true
+      description: Mosaic Team ID issued by your CSM.
+      schema:
+        type: string
+    XRealmId:
+      name: x-realm-id
+      in: header
+      required: true
+      description: Realm ID (`prod` for multi-tenant customers).
+      schema:
+        type: string
+        default: prod
+    XOrigin:
+      name: x-origin
+      in: header
+      required: true
+      description: The domain used for making API calls (must match registered origin).
+      schema:
+        type: string
+    XTenant:
+      name: x-tenant
+      in: header
+      required: true
+      description: Tenant ID (`prod` for multi-tenant customers).
+      schema:
+        type: string
+        default: prod
+    Id:
+      name: id
+      in: path
+      required: true
+      schema:
+        type: string
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: 'API token issued by your Mosaic Customer Success Manager. Send as the
+
+        raw `Authorization` header value (no `Bearer` prefix).
+
+        '
