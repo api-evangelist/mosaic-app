@@ -1,0 +1,22 @@
+{
+  "provider": "mosaic-app",
+  "sources": [
+    "mosaic-app-members-api-openapi.yml",
+    "mosaic-app-projects-api-openapi.yml",
+    "mosaic-app-tasks-api-openapi.yml",
+    "mosaic-app-time-entries-api-openapi.yml",
+    "mosaic-app-work-plans-api-openapi.yml"
+  ],
+  "outputs": [
+    "mosaic-app-members-api-openapi.yml",
+    "mosaic-app-projects-api-openapi.yml",
+    "mosaic-app-tasks-api-openapi.yml",
+    "mosaic-app-time-entries-api-openapi.yml",
+    "mosaic-app-work-plans-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

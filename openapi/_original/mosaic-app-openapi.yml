@@ -1,0 +1,359 @@
+openapi: 3.1.0
+info:
+  title: Mosaic Open API
+  version: "v1"
+  description: |
+    The Mosaic Open API exposes Mosaic's resource-management, workforce
+    planning, and project data so customers can build custom integrations
+    beyond Mosaic's packaged connectors. Authentication uses an API token
+    issued by your Mosaic Customer Success Manager along with your unique
+    Mosaic Team ID.
+
+    Endpoint structure: `/api/{team_id}/{data_type}` where `{data_type}` is
+    one of the documented resources (team_memberships, projects, tasks,
+    time_entries, work_plans, etc.). The base host is
+    `https://api-server.prod.prod.us-east-1.mosaicapp.com` for multi-tenant
+    customers; single-tenant customers get a per-tenant URL.
+
+    Rate limit: 300 requests per 5 minutes (~1 req/sec). All traffic uses
+    HTTPS.
+  contact:
+    name: Mosaic
+    url: https://readme.mosaicapp.com/reference/authentication
+servers:
+  - url: https://api-server.prod.prod.us-east-1.mosaicapp.com
+    description: Multi-tenant production API
+security:
+  - apiKey: []
+tags:
+  - name: Members
+    description: Team membership / people management
+  - name: Projects
+  - name: Tasks
+  - name: Time Entries
+  - name: Work Plans
+paths:
+  /api/{team_id}/team_memberships:
+    parameters:
+      - $ref: "#/components/parameters/TeamId"
+      - $ref: "#/components/parameters/XOrigin"
+      - $ref: "#/components/parameters/XTenant"
+      - $ref: "#/components/parameters/XRealmId"
+    get:
+      tags: [Members]
+      operationId: listMembers
+      summary: Fetches all members.
+      responses:
+        "200": { description: Success }
+        "401": { description: Unauthorized }
+        "429": { description: Rate limited }
+    post:
+      tags: [Members]
+      operationId: createMember
+      summary: Creates a member.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        "201": { description: Created }
+  /api/{team_id}/team_memberships/{id}:
+    parameters:
+      - $ref: "#/components/parameters/TeamId"
+      - $ref: "#/components/parameters/Id"
+      - $ref: "#/components/parameters/XOrigin"
+      - $ref: "#/components/parameters/XTenant"
+      - $ref: "#/components/parameters/XRealmId"
+    get:
+      tags: [Members]
+      operationId: getMember
+      summary: Fetches a member.
+      responses:
+        "200": { description: Success }
+    patch:
+      tags: [Members]
+      operationId: updateMember
+      summary: Updates a member.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        "200": { description: Success }
+  /api/{team_id}/team_memberships/{id}/archive:
+    parameters:
+      - $ref: "#/components/parameters/TeamId"
+      - $ref: "#/components/parameters/Id"
+      - $ref: "#/components/parameters/XOrigin"
+      - $ref: "#/components/parameters/XTenant"
+      - $ref: "#/components/parameters/XRealmId"
+    post:
+      tags: [Members]
+      operationId: archiveMember
+      summary: Archives a member.
+      responses:
+        "200": { description: Success }
+  /api/{team_id}/projects:
+    parameters:
+      - $ref: "#/components/parameters/TeamId"
+      - $ref: "#/components/parameters/XOrigin"
+      - $ref: "#/components/parameters/XTenant"
+      - $ref: "#/components/parameters/XRealmId"
+    get:
+      tags: [Projects]
+      operationId: listProjects
+      summary: Fetches all projects.
+      responses:
+        "200": { description: Success }
+    post:
+      tags: [Projects]
+      operationId: createProject
+      summary: Creates a project.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        "201": { description: Created }
+  /api/{team_id}/projects/{id}:
+    parameters:
+      - $ref: "#/components/parameters/TeamId"
+      - $ref: "#/components/parameters/Id"
+      - $ref: "#/components/parameters/XOrigin"
+      - $ref: "#/components/parameters/XTenant"
+      - $ref: "#/components/parameters/XRealmId"
+    patch:
+      tags: [Projects]
+      operationId: updateProject
+      summary: Updates a project.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        "200": { description: Success }
+    delete:
+      tags: [Projects]
+      operationId: deleteProject
+      summary: Deletes a project.
+      responses:
+        "204": { description: Deleted }
+  /api/{team_id}/projects/{id}/override:
+    parameters:
+      - $ref: "#/components/parameters/TeamId"
+      - $ref: "#/components/parameters/Id"
+      - $ref: "#/components/parameters/XOrigin"
+      - $ref: "#/components/parameters/XTenant"
+      - $ref: "#/components/parameters/XRealmId"
+    post:
+      tags: [Projects]
+      operationId: overrideProjectEstimates
+      summary: Override estimated values for a project.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        "200": { description: Success }
+  /api/{team_id}/tasks:
+    parameters:
+      - $ref: "#/components/parameters/TeamId"
+      - $ref: "#/components/parameters/XOrigin"
+      - $ref: "#/components/parameters/XTenant"
+      - $ref: "#/components/parameters/XRealmId"
+    get:
+      tags: [Tasks]
+      operationId: listTasks
+      summary: Fetches all tasks for a project.
+      responses:
+        "200": { description: Success }
+    post:
+      tags: [Tasks]
+      operationId: createTask
+      summary: Creates a task.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        "201": { description: Created }
+  /api/{team_id}/tasks/{id}:
+    parameters:
+      - $ref: "#/components/parameters/TeamId"
+      - $ref: "#/components/parameters/Id"
+      - $ref: "#/components/parameters/XOrigin"
+      - $ref: "#/components/parameters/XTenant"
+      - $ref: "#/components/parameters/XRealmId"
+    patch:
+      tags: [Tasks]
+      operationId: updateTask
+      summary: Updates a task.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        "200": { description: Success }
+    delete:
+      tags: [Tasks]
+      operationId: deleteTask
+      summary: Deletes a task.
+      responses:
+        "204": { description: Deleted }
+  /api/{team_id}/time_entries:
+    parameters:
+      - $ref: "#/components/parameters/TeamId"
+      - $ref: "#/components/parameters/XOrigin"
+      - $ref: "#/components/parameters/XTenant"
+      - $ref: "#/components/parameters/XRealmId"
+    get:
+      tags: [Time Entries]
+      operationId: listTimeEntries
+      summary: Fetches all time entries.
+      responses:
+        "200": { description: Success }
+    post:
+      tags: [Time Entries]
+      operationId: createTimeEntry
+      summary: Creates a time entry.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        "201": { description: Created }
+  /api/{team_id}/time_entries/{id}:
+    parameters:
+      - $ref: "#/components/parameters/TeamId"
+      - $ref: "#/components/parameters/Id"
+      - $ref: "#/components/parameters/XOrigin"
+      - $ref: "#/components/parameters/XTenant"
+      - $ref: "#/components/parameters/XRealmId"
+    patch:
+      tags: [Time Entries]
+      operationId: updateTimeEntry
+      summary: Updates a time entry.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        "200": { description: Success }
+    delete:
+      tags: [Time Entries]
+      operationId: deleteTimeEntry
+      summary: Deletes a time entry.
+      responses:
+        "204": { description: Deleted }
+  /api/{team_id}/work_plans:
+    parameters:
+      - $ref: "#/components/parameters/TeamId"
+      - $ref: "#/components/parameters/XOrigin"
+      - $ref: "#/components/parameters/XTenant"
+      - $ref: "#/components/parameters/XRealmId"
+    get:
+      tags: [Work Plans]
+      operationId: listWorkPlans
+      summary: Fetches all work plans.
+      responses:
+        "200": { description: Success }
+    post:
+      tags: [Work Plans]
+      operationId: createWorkPlan
+      summary: Creates a work plan.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        "201": { description: Created }
+  /api/{team_id}/work_plans/{id}:
+    parameters:
+      - $ref: "#/components/parameters/TeamId"
+      - $ref: "#/components/parameters/Id"
+      - $ref: "#/components/parameters/XOrigin"
+      - $ref: "#/components/parameters/XTenant"
+      - $ref: "#/components/parameters/XRealmId"
+    patch:
+      tags: [Work Plans]
+      operationId: updateWorkPlan
+      summary: Updates a work plan.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        "200": { description: Success }
+    delete:
+      tags: [Work Plans]
+      operationId: deleteWorkPlan
+      summary: Destroys a work plan.
+      responses:
+        "204": { description: Deleted }
+  /api/{team_id}/work_plans/bulk_delete:
+    parameters:
+      - $ref: "#/components/parameters/TeamId"
+      - $ref: "#/components/parameters/XOrigin"
+      - $ref: "#/components/parameters/XTenant"
+      - $ref: "#/components/parameters/XRealmId"
+    post:
+      tags: [Work Plans]
+      operationId: bulkDeleteWorkPlans
+      summary: Destroys work plans in bulk.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        "200": { description: Success }
+components:
+  parameters:
+    TeamId:
+      name: team_id
+      in: path
+      required: true
+      description: Mosaic Team ID issued by your CSM.
+      schema: { type: string }
+    Id:
+      name: id
+      in: path
+      required: true
+      schema: { type: string }
+    XOrigin:
+      name: x-origin
+      in: header
+      required: true
+      description: The domain used for making API calls (must match registered origin).
+      schema: { type: string }
+    XTenant:
+      name: x-tenant
+      in: header
+      required: true
+      description: Tenant ID (`prod` for multi-tenant customers).
+      schema: { type: string, default: prod }
+    XRealmId:
+      name: x-realm-id
+      in: header
+      required: true
+      description: Realm ID (`prod` for multi-tenant customers).
+      schema: { type: string, default: prod }
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: |
+        API token issued by your Mosaic Customer Success Manager. Send as the
+        raw `Authorization` header value (no `Bearer` prefix).
