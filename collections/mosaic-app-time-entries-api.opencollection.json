@@ -1,0 +1,176 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Mosaic Open Members Time Entries API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Time Entries",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Fetches all time entries.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api-server.prod.prod.us-east-1.mosaicapp.com/api/:team_id/time_entries",
+            "headers": [
+              {
+                "name": "x-origin",
+                "value": ""
+              },
+              {
+                "name": "x-tenant",
+                "value": ""
+              },
+              {
+                "name": "x-realm-id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "team_id",
+                "value": "",
+                "type": "path",
+                "description": "Mosaic Team ID issued by your CSM."
+              }
+            ]
+          },
+          "docs": "Fetches all time entries."
+        },
+        {
+          "info": {
+            "name": "Creates a time entry.",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-server.prod.prod.us-east-1.mosaicapp.com/api/:team_id/time_entries",
+            "headers": [
+              {
+                "name": "x-origin",
+                "value": ""
+              },
+              {
+                "name": "x-tenant",
+                "value": ""
+              },
+              {
+                "name": "x-realm-id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "team_id",
+                "value": "",
+                "type": "path",
+                "description": "Mosaic Team ID issued by your CSM."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a time entry."
+        },
+        {
+          "info": {
+            "name": "Updates a time entry.",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api-server.prod.prod.us-east-1.mosaicapp.com/api/:team_id/time_entries/:id",
+            "headers": [
+              {
+                "name": "x-origin",
+                "value": ""
+              },
+              {
+                "name": "x-tenant",
+                "value": ""
+              },
+              {
+                "name": "x-realm-id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "team_id",
+                "value": "",
+                "type": "path",
+                "description": "Mosaic Team ID issued by your CSM."
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Updates a time entry."
+        },
+        {
+          "info": {
+            "name": "Deletes a time entry.",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api-server.prod.prod.us-east-1.mosaicapp.com/api/:team_id/time_entries/:id",
+            "headers": [
+              {
+                "name": "x-origin",
+                "value": ""
+              },
+              {
+                "name": "x-tenant",
+                "value": ""
+              },
+              {
+                "name": "x-realm-id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "team_id",
+                "value": "",
+                "type": "path",
+                "description": "Mosaic Team ID issued by your CSM."
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Deletes a time entry."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

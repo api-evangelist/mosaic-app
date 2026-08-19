@@ -1,0 +1,213 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Mosaic Open Members Work Plans API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Work Plans",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Fetches all work plans.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api-server.prod.prod.us-east-1.mosaicapp.com/api/:team_id/work_plans",
+            "headers": [
+              {
+                "name": "x-origin",
+                "value": ""
+              },
+              {
+                "name": "x-tenant",
+                "value": ""
+              },
+              {
+                "name": "x-realm-id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "team_id",
+                "value": "",
+                "type": "path",
+                "description": "Mosaic Team ID issued by your CSM."
+              }
+            ]
+          },
+          "docs": "Fetches all work plans."
+        },
+        {
+          "info": {
+            "name": "Creates a work plan.",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-server.prod.prod.us-east-1.mosaicapp.com/api/:team_id/work_plans",
+            "headers": [
+              {
+                "name": "x-origin",
+                "value": ""
+              },
+              {
+                "name": "x-tenant",
+                "value": ""
+              },
+              {
+                "name": "x-realm-id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "team_id",
+                "value": "",
+                "type": "path",
+                "description": "Mosaic Team ID issued by your CSM."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a work plan."
+        },
+        {
+          "info": {
+            "name": "Updates a work plan.",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api-server.prod.prod.us-east-1.mosaicapp.com/api/:team_id/work_plans/:id",
+            "headers": [
+              {
+                "name": "x-origin",
+                "value": ""
+              },
+              {
+                "name": "x-tenant",
+                "value": ""
+              },
+              {
+                "name": "x-realm-id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "team_id",
+                "value": "",
+                "type": "path",
+                "description": "Mosaic Team ID issued by your CSM."
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Updates a work plan."
+        },
+        {
+          "info": {
+            "name": "Destroys a work plan.",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api-server.prod.prod.us-east-1.mosaicapp.com/api/:team_id/work_plans/:id",
+            "headers": [
+              {
+                "name": "x-origin",
+                "value": ""
+              },
+              {
+                "name": "x-tenant",
+                "value": ""
+              },
+              {
+                "name": "x-realm-id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "team_id",
+                "value": "",
+                "type": "path",
+                "description": "Mosaic Team ID issued by your CSM."
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Destroys a work plan."
+        },
+        {
+          "info": {
+            "name": "Destroys work plans in bulk.",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-server.prod.prod.us-east-1.mosaicapp.com/api/:team_id/work_plans/bulk_delete",
+            "headers": [
+              {
+                "name": "x-origin",
+                "value": ""
+              },
+              {
+                "name": "x-tenant",
+                "value": ""
+              },
+              {
+                "name": "x-realm-id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "team_id",
+                "value": "",
+                "type": "path",
+                "description": "Mosaic Team ID issued by your CSM."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Destroys work plans in bulk."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

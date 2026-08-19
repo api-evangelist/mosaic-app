@@ -1,0 +1,214 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Mosaic Open Members API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Members",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Fetches all members.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api-server.prod.prod.us-east-1.mosaicapp.com/api/:team_id/team_memberships",
+            "headers": [
+              {
+                "name": "x-origin",
+                "value": ""
+              },
+              {
+                "name": "x-tenant",
+                "value": ""
+              },
+              {
+                "name": "x-realm-id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "team_id",
+                "value": "",
+                "type": "path",
+                "description": "Mosaic Team ID issued by your CSM."
+              }
+            ]
+          },
+          "docs": "Fetches all members."
+        },
+        {
+          "info": {
+            "name": "Creates a member.",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-server.prod.prod.us-east-1.mosaicapp.com/api/:team_id/team_memberships",
+            "headers": [
+              {
+                "name": "x-origin",
+                "value": ""
+              },
+              {
+                "name": "x-tenant",
+                "value": ""
+              },
+              {
+                "name": "x-realm-id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "team_id",
+                "value": "",
+                "type": "path",
+                "description": "Mosaic Team ID issued by your CSM."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a member."
+        },
+        {
+          "info": {
+            "name": "Fetches a member.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api-server.prod.prod.us-east-1.mosaicapp.com/api/:team_id/team_memberships/:id",
+            "headers": [
+              {
+                "name": "x-origin",
+                "value": ""
+              },
+              {
+                "name": "x-tenant",
+                "value": ""
+              },
+              {
+                "name": "x-realm-id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "team_id",
+                "value": "",
+                "type": "path",
+                "description": "Mosaic Team ID issued by your CSM."
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Fetches a member."
+        },
+        {
+          "info": {
+            "name": "Updates a member.",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api-server.prod.prod.us-east-1.mosaicapp.com/api/:team_id/team_memberships/:id",
+            "headers": [
+              {
+                "name": "x-origin",
+                "value": ""
+              },
+              {
+                "name": "x-tenant",
+                "value": ""
+              },
+              {
+                "name": "x-realm-id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "team_id",
+                "value": "",
+                "type": "path",
+                "description": "Mosaic Team ID issued by your CSM."
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Updates a member."
+        },
+        {
+          "info": {
+            "name": "Archives a member.",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api-server.prod.prod.us-east-1.mosaicapp.com/api/:team_id/team_memberships/:id/archive",
+            "headers": [
+              {
+                "name": "x-origin",
+                "value": ""
+              },
+              {
+                "name": "x-tenant",
+                "value": ""
+              },
+              {
+                "name": "x-realm-id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "team_id",
+                "value": "",
+                "type": "path",
+                "description": "Mosaic Team ID issued by your CSM."
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Archives a member."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

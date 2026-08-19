@@ -1,0 +1,761 @@
+{
+  "item": [
+    {
+      "id": "6a2fa7e2-75a2-419c-8915-79b2cd3b12da",
+      "name": "Work Plans",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "0fd2a64c-2620-4065-864d-d6b6407cea19",
+          "name": "Fetches all work plans.",
+          "request": {
+            "name": "Fetches all work plans.",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                ":team_id",
+                "work_plans"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "team_id",
+                  "description": "(Required) Mosaic Team ID issued by your CSM."
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) The domain used for making API calls (must match registered origin).",
+                "key": "x-origin",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) Tenant ID (`prod` for multi-tenant customers).",
+                "key": "x-tenant",
+                "value": "prod"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) Realm ID (`prod` for multi-tenant customers).",
+                "key": "x-realm-id",
+                "value": "prod"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9974e053-5453-4a63-ad32-788c53f94de4",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    ":team_id",
+                    "work_plans"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "team_id",
+                      "description": "(Required) Mosaic Team ID issued by your CSM."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) The domain used for making API calls (must match registered origin).",
+                    "key": "x-origin",
+                    "value": "<string>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) Tenant ID (`prod` for multi-tenant customers).",
+                    "key": "x-tenant",
+                    "value": "prod"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) Realm ID (`prod` for multi-tenant customers).",
+                    "key": "x-realm-id",
+                    "value": "prod"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "12fbfd8b-ddfa-44e2-88c8-c7251be58351",
+          "name": "Creates a work plan.",
+          "request": {
+            "name": "Creates a work plan.",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                ":team_id",
+                "work_plans"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "team_id",
+                  "description": "(Required) Mosaic Team ID issued by your CSM."
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) The domain used for making API calls (must match registered origin).",
+                "key": "x-origin",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) Tenant ID (`prod` for multi-tenant customers).",
+                "key": "x-tenant",
+                "value": "prod"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) Realm ID (`prod` for multi-tenant customers).",
+                "key": "x-realm-id",
+                "value": "prod"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"key_0\": 1116.5479760165608,\n  \"key_1\": false,\n  \"key_2\": 2025,\n  \"key_3\": \"string\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "d6141d6f-59dd-480b-9d02-42d474d7486f",
+              "name": "Created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    ":team_id",
+                    "work_plans"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "team_id",
+                      "description": "(Required) Mosaic Team ID issued by your CSM."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) The domain used for making API calls (must match registered origin).",
+                    "key": "x-origin",
+                    "value": "<string>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) Tenant ID (`prod` for multi-tenant customers).",
+                    "key": "x-tenant",
+                    "value": "prod"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) Realm ID (`prod` for multi-tenant customers).",
+                    "key": "x-realm-id",
+                    "value": "prod"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"key_0\": 1665,\n  \"key_1\": 9390.043704963997\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "81e6c31b-4563-4ebc-a052-5b9bc6e7e556",
+          "name": "Updates a work plan.",
+          "request": {
+            "name": "Updates a work plan.",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                ":team_id",
+                "work_plans",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "team_id",
+                  "description": "(Required) Mosaic Team ID issued by your CSM."
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) The domain used for making API calls (must match registered origin).",
+                "key": "x-origin",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) Tenant ID (`prod` for multi-tenant customers).",
+                "key": "x-tenant",
+                "value": "prod"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) Realm ID (`prod` for multi-tenant customers).",
+                "key": "x-realm-id",
+                "value": "prod"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PATCH",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"key_0\": 1116.5479760165608,\n  \"key_1\": false,\n  \"key_2\": 2025,\n  \"key_3\": \"string\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "3a04f518-9cb2-49ad-ad98-99ea1f61c9ba",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    ":team_id",
+                    "work_plans",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "team_id",
+                      "description": "(Required) Mosaic Team ID issued by your CSM."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) The domain used for making API calls (must match registered origin).",
+                    "key": "x-origin",
+                    "value": "<string>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) Tenant ID (`prod` for multi-tenant customers).",
+                    "key": "x-tenant",
+                    "value": "prod"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) Realm ID (`prod` for multi-tenant customers).",
+                    "key": "x-realm-id",
+                    "value": "prod"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"key_0\": 1665,\n  \"key_1\": 9390.043704963997\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5452db6a-0ca2-4039-be4f-3caa72d36881",
+          "name": "Destroys a work plan.",
+          "request": {
+            "name": "Destroys a work plan.",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                ":team_id",
+                "work_plans",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "team_id",
+                  "description": "(Required) Mosaic Team ID issued by your CSM."
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) The domain used for making API calls (must match registered origin).",
+                "key": "x-origin",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) Tenant ID (`prod` for multi-tenant customers).",
+                "key": "x-tenant",
+                "value": "prod"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) Realm ID (`prod` for multi-tenant customers).",
+                "key": "x-realm-id",
+                "value": "prod"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "772f70dd-586a-4987-8642-0961741e62fe",
+              "name": "Deleted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    ":team_id",
+                    "work_plans",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "team_id",
+                      "description": "(Required) Mosaic Team ID issued by your CSM."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) The domain used for making API calls (must match registered origin).",
+                    "key": "x-origin",
+                    "value": "<string>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) Tenant ID (`prod` for multi-tenant customers).",
+                    "key": "x-tenant",
+                    "value": "prod"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) Realm ID (`prod` for multi-tenant customers).",
+                    "key": "x-realm-id",
+                    "value": "prod"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "302ef0e1-700b-4a48-91ae-19aa38741b1d",
+          "name": "Destroys work plans in bulk.",
+          "request": {
+            "name": "Destroys work plans in bulk.",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                ":team_id",
+                "work_plans",
+                "bulk_delete"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "team_id",
+                  "description": "(Required) Mosaic Team ID issued by your CSM."
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) The domain used for making API calls (must match registered origin).",
+                "key": "x-origin",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) Tenant ID (`prod` for multi-tenant customers).",
+                "key": "x-tenant",
+                "value": "prod"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) Realm ID (`prod` for multi-tenant customers).",
+                "key": "x-realm-id",
+                "value": "prod"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"key_0\": 1116.5479760165608,\n  \"key_1\": false,\n  \"key_2\": 2025,\n  \"key_3\": \"string\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "03ae68a2-1de0-4b3b-92ec-f3b23bdf69aa",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    ":team_id",
+                    "work_plans",
+                    "bulk_delete"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "team_id",
+                      "description": "(Required) Mosaic Team ID issued by your CSM."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) The domain used for making API calls (must match registered origin).",
+                    "key": "x-origin",
+                    "value": "<string>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) Tenant ID (`prod` for multi-tenant customers).",
+                    "key": "x-tenant",
+                    "value": "prod"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) Realm ID (`prod` for multi-tenant customers).",
+                    "key": "x-realm-id",
+                    "value": "prod"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"key_0\": 1665,\n  \"key_1\": 9390.043704963997\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api-server.prod.prod.us-east-1.mosaicapp.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "e2fa76b8-0b21-4953-9157-08b39b261455",
+    "name": "Mosaic Open Members Work Plans API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Mosaic Open API exposes Mosaic's resource-management, workforce\nplanning, and project data so customers can build custom integrations\nbeyond Mosaic's packaged connectors. Authentication uses an API token\nissued by your Mosaic Customer Success Manager along with your unique\nMosaic Team ID.\n\nEndpoint structure: `/api/{team_id}/{data_type}` where `{data_type}` is\none of the documented resources (team_memberships, projects, tasks,\ntime_entries, work_plans, etc.). The base host is\n`https://api-server.prod.prod.us-east-1.mosaicapp.com` for multi-tenant\ncustomers; single-tenant customers get a per-tenant URL.\n\nRate limit: 300 requests per 5 minutes (~1 req/sec). All traffic uses\nHTTPS.\n\n\nContact Support:\n Name: Mosaic",
+      "type": "text/plain"
+    }
+  }
+}
