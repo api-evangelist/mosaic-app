@@ -51,6 +51,13 @@ apis:
     and covers people, projects, phases, tasks, time entries, and work plans.
   humanURL: https://readme.mosaicapp.com/reference/authentication
   tags:
+  - OpenAPI
+  - Time Entries
+  - Work Plans
+  - Project
+  - People
+  - Custom Integrations
+  tags_raw:
   - Open API
   - Time Entries
   - Work Plans
@@ -128,6 +135,8 @@ apis:
   description: The Projects API from Mosaic — 3 operation(s) for projects.
   humanURL: https://readme.mosaicapp.com/reference/authentication
   tags:
+  - Project
+  tags_raw:
   - Projects
   properties:
   - type: OpenAPI
@@ -137,6 +146,8 @@ apis:
   description: The Tasks API from Mosaic — 2 operation(s) for tasks.
   humanURL: https://readme.mosaicapp.com/reference/authentication
   tags:
+  - Task
+  tags_raw:
   - Tasks
   properties:
   - type: OpenAPI
