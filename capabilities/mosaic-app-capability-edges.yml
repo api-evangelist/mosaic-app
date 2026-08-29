@@ -1,0 +1,35 @@
+slug: mosaic-app
+provider: Mosaic
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Professional Services
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 2
+edges:
+- tag: Projects
+  spec_file: mosaic-app-projects-api-openapi.yml
+  capability_id: BC-900.30
+  capability_id_l1: BC-900
+  capability_name: Project Management
+  confidence: 0.78
+  evidence: POST /api/{team_id}/projects createProject; POST /api/{team_id}/projects/{id}/override 'Override
+    estimated values for a project'
+  reason: Project entities with estimated-value overrides in a project management / resource planning
+    platform; the operations manage project records and estimates, matching Project Management. Could
+    alternatively be engagement-level delivery in a PS firm, hence not top confidence.
+- tag: Tasks
+  spec_file: mosaic-app-tasks-api-openapi.yml
+  capability_id: BC-900.30
+  capability_id_l1: BC-900
+  capability_name: Project Management
+  confidence: 0.72
+  evidence: GET /api/{team_id}/tasks listTasks 'Fetches all tasks for a project.'
+  reason: Tasks are explicitly scoped to a project, i.e. work breakdown and tracking within project execution.
+    Generic CRUD only, so moderate confidence.

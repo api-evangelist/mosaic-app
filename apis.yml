@@ -183,6 +183,9 @@ apis:
   - type: OpenAPI
     url: openapi/mosaic-app-work-plans-api-openapi.yml
 common:
+  - type: CapabilityMap
+    url: capabilities/mosaic-app-capability-edges.yml
+    name: Mosaic Business Capability Map
   - type: AgenticAccess
     url: agentic-access/mosaic-app-agentic-access.yml
   - type: TrustCenter
