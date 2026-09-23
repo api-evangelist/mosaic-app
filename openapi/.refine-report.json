@@ -1,11 +1,7 @@
 {
   "provider": "mosaic-app",
   "sources": [
-    "mosaic-app-members-api-openapi.yml",
-    "mosaic-app-projects-api-openapi.yml",
-    "mosaic-app-tasks-api-openapi.yml",
-    "mosaic-app-time-entries-api-openapi.yml",
-    "mosaic-app-work-plans-api-openapi.yml"
+    "_original/mosaic-app-openapi.yml"
   ],
   "outputs": [
     "mosaic-app-members-api-openapi.yml",
@@ -17,6 +13,16 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "mosaic-app-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "mosaic-app-members-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "mosaic-app-projects-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "mosaic-app-tasks-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "mosaic-app-time-entries-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "mosaic-app-work-plans-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
