@@ -99,27 +99,10 @@ paths:
           description: Success
 components:
   parameters:
-    XRealmId:
-      name: x-realm-id
-      in: header
-      required: true
-      description: Realm ID (`prod` for multi-tenant customers).
-      schema:
-        type: string
-        default: prod
-    XTenant:
-      name: x-tenant
-      in: header
-      required: true
-      description: Tenant ID (`prod` for multi-tenant customers).
-      schema:
-        type: string
-        default: prod
-    TeamId:
-      name: team_id
+    Id:
+      name: id
       in: path
       required: true
-      description: Mosaic Team ID issued by your CSM.
       schema:
         type: string
     XOrigin:
@@ -129,12 +112,29 @@ components:
       description: The domain used for making API calls (must match registered origin).
       schema:
         type: string
-    Id:
-      name: id
+    TeamId:
+      name: team_id
       in: path
       required: true
+      description: Mosaic Team ID issued by your CSM.
       schema:
         type: string
+    XTenant:
+      name: x-tenant
+      in: header
+      required: true
+      description: Tenant ID (`prod` for multi-tenant customers).
+      schema:
+        type: string
+        default: prod
+    XRealmId:
+      name: x-realm-id
+      in: header
+      required: true
+      description: Realm ID (`prod` for multi-tenant customers).
+      schema:
+        type: string
+        default: prod
   securitySchemes:
     apiKey:
       type: apiKey
