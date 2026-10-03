@@ -101,19 +101,6 @@ paths:
           description: Success
 components:
   parameters:
-    Id:
-      name: id
-      in: path
-      required: true
-      schema:
-        type: string
-    XOrigin:
-      name: x-origin
-      in: header
-      required: true
-      description: The domain used for making API calls (must match registered origin).
-      schema:
-        type: string
     TeamId:
       name: team_id
       in: path
@@ -129,6 +116,19 @@ components:
       schema:
         type: string
         default: prod
+    Id:
+      name: id
+      in: path
+      required: true
+      schema:
+        type: string
+    XOrigin:
+      name: x-origin
+      in: header
+      required: true
+      description: The domain used for making API calls (must match registered origin).
+      schema:
+        type: string
     XRealmId:
       name: x-realm-id
       in: header
