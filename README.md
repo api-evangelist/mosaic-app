@@ -1,4 +1,4 @@
-# Mosaic (mosaic-app)
+# Mosaic
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,72 +66,129 @@
 
 Mosaic is a resource management, workforce planning, and AI-assisted project management platform built for architecture, engineering, and professional services firms. It plugs into the ERPs those firms already run — Deltek (Ajera, Vantagepoint, Vision, Costpoint), Unanet, BST10, BQE Core, QuickBooks, Salesforce, and Microsoft Dynamics 365 — plus project management systems (Asana, Jira, GitHub, Karbon) and HRIS (BambooHR), then unifies the data into a single forecasting, time-entry, and capacity-planning surface. Mosaic exposes an Open API for custom integrations alongside its packaged connectors.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/mosaic-app/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/mosaic-app/refs/heads/main/apis.yml)
+**Areas:** Resource Management · Workforce Planning · Project Management · AEC · Professional Services · Time Tracking · Forecasting · AI Assistant · Integration Platform · Fortune 500
 
-## Scope
+## Mosaic on APIs.io
 
-- **Type:** Index
-- **Position:** Provider
-- **Access:** 3rd-Party
+Everything profiled for Mosaic is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/mosaic-app/](https://apis.io/providers/mosaic-app/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (6)
 
-- Resource Management
-- Workforce Planning
-- Project Management
-- AEC
-- Professional Services
-- Time Tracking
-- Forecasting
-- AI Assistant
-- Integration Platform
+- [Mosaic Open API](https://apis.io/apis/mosaic-app/open-api/) — The Mosaic Open API exposes the workforce, project, and financial data Mosaic manages so firms can build custom integrations beyond the packaged ERP and PM…
+- [Mosaic Members API](https://apis.io/apis/mosaic-app/mosaic-app-members-api/) — Team membership / people management
+- [Mosaic Projects API](https://apis.io/apis/mosaic-app/mosaic-app-projects-api/) — The Projects API from Mosaic — 3 operation(s) for projects.
+- [Mosaic Tasks API](https://apis.io/apis/mosaic-app/mosaic-app-tasks-api/) — The Tasks API from Mosaic — 2 operation(s) for tasks.
+- [Mosaic Time Entries API](https://apis.io/apis/mosaic-app/mosaic-app-time-entries-api/) — The Time Entries API from Mosaic — 2 operation(s) for time entries.
+- [Mosaic Work Plans API](https://apis.io/apis/mosaic-app/mosaic-app-work-plans-api/) — The Work Plans API from Mosaic — 3 operation(s) for work plans.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-05-23
-- **Modified:** 2026-05-23
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Mosaic Open API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-The Mosaic Open API exposes the workforce, project, and financial data Mosaic manages so firms can build custom integrations beyond the packaged ERP and PM connectors. It authenticates via API token and covers people, projects, phases, tasks, time entries, and work plans.
+- [Mosaic App Agentic Access](https://apis.io/agentic-access/mosaic-app/mosaic-app-agentic-access/)
 
-- **Human URL:** [https://readme.mosaicapp.com/reference/authentication](https://readme.mosaicapp.com/reference/authentication)
+#### Collections (6)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- Open API
-- Time Entries
-- Work Plans
-- Projects
-- People
-- Custom Integrations
+- [Mosaic Open API](https://apis.io/collections/mosaic-app/open-mosaic-app/)
+- [Mosaic Open Members API](https://apis.io/collections/mosaic-app/open-mosaic-app-members-api/)
+- [Mosaic Open Members Projects API](https://apis.io/collections/mosaic-app/open-mosaic-app-projects-api/)
+- [Mosaic Open Members Tasks API](https://apis.io/collections/mosaic-app/open-mosaic-app-tasks-api/)
+- [Mosaic Open Members Time Entries API](https://apis.io/collections/mosaic-app/open-mosaic-app-time-entries-api/)
+- [Mosaic Open Members Work Plans API](https://apis.io/collections/mosaic-app/open-mosaic-app-work-plans-api/)
 
-#### Properties
+#### Security (3)
 
-- [Documentation](https://readme.mosaicapp.com/)
-- [API Reference](https://readme.mosaicapp.com/reference/authentication)
-- [Changelog](https://readme.mosaicapp.com/changelog)
-- [L L M S Txt](https://readme.mosaicapp.com/llms.txt)
-- [Getting Started](https://readme.mosaicapp.com/docs/integration-steps)
-- [Postman Collection](collections/mosaic-app.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/mosaic-app.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-## Common Properties
+- [Mosaic App Authentication](https://apis.io/security/mosaic-app/mosaic-app-authentication/)
+- [Mosaic App Domain Security](https://apis.io/security/mosaic-app/mosaic-app-domain-security/)
+- [Mosaic App Trust Center](https://apis.io/security/mosaic-app/mosaic-app-trust-center/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Mosaic App Plans Pricing](https://apis.io/plans/mosaic-app/mosaic-app-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Mosaic App Rate Limits](https://apis.io/rate-limits/mosaic-app/mosaic-app-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Mosaic App Finops](https://apis.io/finops/mosaic-app/mosaic-app-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://mosaicapp.com/)
 - [Documentation](https://readme.mosaicapp.com/)
-- [API Reference](https://readme.mosaicapp.com/reference/authentication)
-- [Getting Started](https://readme.mosaicapp.com/docs/integration-steps)
-- [Changelog](https://readme.mosaicapp.com/changelog)
-- [L L M S Txt](https://readme.mosaicapp.com/llms.txt)
+- [Getting started](https://readme.mosaicapp.com/docs/integration-steps)
+- [API reference](https://readme.mosaicapp.com/reference/authentication)
 - [Pricing](https://mosaicapp.com/pricing)
-- [Plan](plans/mosaic-app-plans-pricing.yml)
-- [Rate  Limit](rate-limits/mosaic-app-rate-limits.yml)
-- [Fin Ops](finops/mosaic-app-finops.yml)
+- [Changelog](https://readme.mosaicapp.com/changelog)
+- [Blog](https://mosaicapp.com/blog)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 29.0** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 64.3 |
+| Contract quality | 45.3 |
+| Contract governance | 0.0 |
+| Operational transparency | 13.2 |
+| Developer ergonomics | 28.6 |
+| Access clarity | 23.7 |
+
+**Agent readiness 17.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 16.7** — AI & Biometrics
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/mosaic-app/](https://apis.io/providers/mosaic-app/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Mosaic: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/mosaic-app/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
